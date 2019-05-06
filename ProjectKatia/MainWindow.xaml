@@ -1,12 +1,52 @@
-﻿<Window x:Class="ProjectKatia.MainWindow"
+﻿<Window x:Name="load" x:Class="ProjectKatia.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectKatia"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="773.646" Closing="Window_Closing_1">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="466*"/>
+            <ColumnDefinition Width="301*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="Wheat" HorizontalAlignment="Left" Height="428" Margin="-3,-1,0,-6.333" VerticalAlignment="Top" Width="377">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Content="Manage Stock" Grid.Row="0" FontSize="20" HorizontalAlignment="Left" Margin="91,8,0,0" VerticalAlignment="Top" Width="148" Height="36"/>
+            <Button Content="Add" Grid.Row="0" HorizontalAlignment="Left" Margin="29,165,0,0" VerticalAlignment="Top" Width="75" Click="AddToTheWareHouse"/>
+            <TextBox Name="highAdd" Grid.Row="0" HorizontalAlignment="Left" Height="30" Margin="133,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="59"/>
+            <TextBox Name="countAdd" Grid.Row="0" HorizontalAlignment="Left" Height="30" Margin="231,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="59"/>
+            <TextBox Name="buttonAdd" Grid.Row="0" HorizontalAlignment="Left" Height="30" Margin="37,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="59"/>
+            <Label Content="Button" Grid.Row="0" HorizontalAlignment="Left" Margin="39,50,0,0" VerticalAlignment="Top" Height="30" Width="59"/>
+            <Label Content="Hight" Grid.Row="0" HorizontalAlignment="Left" Margin="133,50,0,0" VerticalAlignment="Top" Height="30" Width="59"/>
+            <Label Content="Amount" Grid.Row="0" HorizontalAlignment="Left" Margin="227,50,0,0" VerticalAlignment="Top" Height="30" Width="59"/>
+            <Label Content="Box Info" Grid.Row="1" FontSize="20" HorizontalAlignment="Left" Margin="117,7.667,0,0" VerticalAlignment="Top" Width="148" Height="36"/>
+            <Label Content="Button" Grid.Row="1" HorizontalAlignment="Left" Margin="37,31.667,0,0" VerticalAlignment="Top" Height="30" Width="59"/>
+            <Label Content="Hight" Grid.Row="1" HorizontalAlignment="Left" Margin="37,94.667,0,0" VerticalAlignment="Top" Height="30" Width="59"/>
+            <TextBox Name="highInfo" Grid.Row="1" HorizontalAlignment="Left" Height="30" Margin="35,122.667,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="59"/>
+            <TextBox Name="buttonInfo" Grid.Row="1" HorizontalAlignment="Left" Height="30" Margin="37,62.667,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="59"/>
+            <TextBlock Name="boxInfoBlock" FontSize="14" HorizontalAlignment="Left" Margin="143,64.667,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="127" Width="173"/>
+            <Button Content="Search" HorizontalAlignment="Left" Margin="30,166.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="BringBoxInfo"/>
+            <TextBlock Name="addBlock" HorizontalAlignment="Left" Margin="121,123,0,0" TextWrapping="Wrap" FontSize="15" Text="" VerticalAlignment="Top" Height="79" Width="243"/>
+        </Grid>
+        <Grid Background="Wheat" HorizontalAlignment="Left" Height="426" Margin="375,-1,0,-4.333" VerticalAlignment="Top" Width="391" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Content="Alerts" FontSize="20" Grid.Row="0" HorizontalAlignment="Left" Margin="143,12,0,0" VerticalAlignment="Top" Height="43" Width="66"/>
+            <TextBlock Name="alertsBlock" HorizontalAlignment="Left" Margin="14,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="153" Width="364"/>
+            <Label Content="Purchase" FontSize="20" Grid.Row="1" HorizontalAlignment="Left" Margin="142,13.667,0,0" VerticalAlignment="Top" Height="43" Width="121"/>
+            <Label Content="Button" Grid.Row="1" HorizontalAlignment="Left" Margin="37,31.667,0,0" VerticalAlignment="Top" Height="30" Width="59"/>
+            <Label Content="Hight" Grid.Row="1" HorizontalAlignment="Left" Margin="37,94.667,0,0" VerticalAlignment="Top" Height="30" Width="59"/>
+            <TextBox Name="highPurch" Grid.Row="1" HorizontalAlignment="Left" Height="30" Margin="35,122.667,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="59"/>
+            <TextBox Name="buttonPurch" Grid.Row="1" HorizontalAlignment="Left" Height="30" Margin="37,62.667,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="59"/>
+            <TextBlock FontSize="15" Name="purchaseBlock" HorizontalAlignment="Left" Margin="116,60.667,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="132" Width="262"/>
+            <Button Content="Purchase" HorizontalAlignment="Left" Margin="30,166.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Purchase"/>
+        </Grid>
     </Grid>
 </Window>
